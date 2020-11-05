@@ -8,6 +8,17 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/type
 
 */
 
+// declare function
+// 	take in two nuumbers as perameters/arguements
+// 		is bigger than b?
+// 		is smaller than b?
+// 		is equal to be?
+
+// Output
+// ; 'true', 'false', 'otherwise'
+
+// call the function
+
 /**
 Examples:
 
@@ -37,9 +48,18 @@ console.log(result) // -1
 
 **/
 
-
-
 function isBigger(a, b) {
-	//Your code here
-	
+  var results;
+  if (typeof a !== "number" || typeof b !== "number") {
+    console.log(-1);
+  } else if (a > b) {
+    results = "True";
+    console.log(results);
+  } else if (a < b) {
+    results = "False";
+    console.log(results);
+  } else {
+    console.log(0);
+  }
 }
+isBigger("two", 7);
