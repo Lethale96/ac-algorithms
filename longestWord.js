@@ -18,8 +18,20 @@
 // findLongestWord("What is the average airspeed velocity of an unladen swallow") should return 8.
 // findLongestWord("What if we try a super-long word such as otorhinolaryngology") should return 19.
 
-
 function findLongestWord(str) {
-  //your code here
-}
+  let nonText = /([^A-Z a-z])+/g;
+  let text = str.replace(nonText, "").split(" ");
+  let longestText = "";
+  let longestCount = 0;
 
+  for (let i = 0; i < text.length; i++) {
+    if (text[i].length > longestCount) {
+      longestCount = text[i].length;
+      longestText = text[i];
+    }
+  }
+  console.log(longestText.length);
+}
+findLongestWord(
+  "I am meatloaf with mash potatoes, and spanich or green beans."
+);
