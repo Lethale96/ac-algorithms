@@ -34,6 +34,13 @@ console.log(result) // "ghimmnorstyy"
 **/
 
 function alphabetSoup(str) {
-	//Your code here
-	
+  var resultSplit = str.split("");
+  console.log(resultSplit);
+  var resultSort = resultSplit.sort();
+  console.log(resultSort);
+  var resultJoin = resultSort.join("-");
+  console.log(resultJoin);
+  var resultTrim = str.trim();
+  console.log(resultTrim);
 }
+alphabetSoup(" LOVE ");
